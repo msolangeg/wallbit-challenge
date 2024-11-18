@@ -53,12 +53,16 @@ https://wallbit-challenge-iota.vercel.app/
 ![App Screenshot](https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731965740/Challenge/screen2destock_gncnjr.png)
 
 **Mobile**
-![App Screenshot](https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_3_rxpivk.jpg)
-![App Screenshot](https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_4_uq9zr9.jpg)
-![App Screenshot](https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_2_u9pegk.jpg)
-![App Screenshot](https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_1_hohojl.jpg)
+<div align="center">
+<img height="200" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_3_rxpivk.jpg"  />
+<img height="200" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_4_uq9zr9.jpg"  />
+</div>
+<div align="center">
+<img height="200" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_2_u9pegk.jpg"  />
+<img height="200" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_1_hohojl.jpg"  />
+</div>
 
-## API Reference 📖
+## API 📖
 
 https://fakestoreapi.com/
 
@@ -71,7 +75,7 @@ https://fakestoreapi.com/products
 - [@msolangeg](https://github.com/msolangeg)
 
 
-## Contruido con 🛠️
+## Technologies 🛠️
 
 **Client:** 
 
@@ -83,7 +87,7 @@ PrimeReact: https://primereact.org/
 
 
 
-## Agradecimientos 🎁
+## Thanks 🎁
 *  📢 Muy contenta y agradecida de participar en mi primer challenge como Junior, donde paso a paso pude sortear los diferentes desafíos que se me presentaron a lo largo del desarrollo; desde la creación del diseño, la lógica y trabajar el responsivo. Pero muy feliz con los resultados y lo aprendido. 
 *  🤓 Gracias a [GoncyJs](https://github.com/goncy) por traernos este desafío y por todo lo que nos brinda en cada stream. 
 
