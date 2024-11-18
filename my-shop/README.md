@@ -54,12 +54,12 @@ https://wallbit-challenge-iota.vercel.app/
 
 **Mobile**
 <div align="center">
-<img height="200" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_3_rxpivk.jpg"  />
-<img height="200" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_4_uq9zr9.jpg"  />
+<img height="600" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_3_rxpivk.jpg"  />
+<img height="600" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_4_uq9zr9.jpg"  />
 </div>
 <div align="center">
-<img height="200" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_2_u9pegk.jpg"  />
-<img height="200" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_1_hohojl.jpg"  />
+<img height="600" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_2_u9pegk.jpg"  />
+<img height="600" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_1_hohojl.jpg"  />
 </div>
 
 ## API 📖
