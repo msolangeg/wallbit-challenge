@@ -8,6 +8,8 @@ import employed from "./assets/image/employed.png";
 import "primeicons/primeicons.css";
 import "./App.css";
 
+
+//Renderizo navbar, título y landing.......................................................................................................
 function App() {
   const toast = React.useRef(null);
   const [visible, setVisible] = useState(false);
@@ -26,7 +28,7 @@ function App() {
       </Dialog>
       <div className="flex flex-row justify-center md:justify-start items-center gap-4 w-full">
         <button onClick={() => setVisible(true)}>
-          <img className="w-16" src={juantoposvg} alt="logo" />
+          <img className="w-16 animate-wiggle" src={juantoposvg} alt="logo" />
         </button>
         <h1 className="text-3xl font-bold">Tienda - EL TOPO </h1>
       </div>

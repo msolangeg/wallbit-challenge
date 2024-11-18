@@ -1,19 +1,48 @@
+import React from "react";
+import { confirmDialog } from "primereact/confirmdialog";
 import { Button } from "primereact/button";
 import { Image } from "primereact/image";
-import React from "react";
 import { formatCurrency } from "../../utils/helpers";
-import { Accordion, AccordionTab } from "primereact/accordion";
 
 const CartCard = ({
   product,
   incrementQuantity,
   decrementQuantity,
   deleteProduct,
+  toast,
 }) => {
+  //Elimna el producto y muestra el toast.......................................................................
+  const accept = (product) => {
+    deleteProduct(product);
+    toast.current.show({
+      severity: "success",
+      summary: "Eliminado",
+      detail: "Producto eliminado correctamente",
+      life: 3000,
+    });
+  };
+
+  //Cierra el toast al presionar No...........................................................
+  const reject = () => {};
+
+  //Toast para confirmar si deseo eliminar UN solo producto del carrito.......................
+  const confirm1 = (product) => {
+    confirmDialog({
+      message: "¿Estas seguro de eliminar el producto?",
+      header: "Confirmación",
+      icon: "pi pi-exclamation-triangle",
+      defaultFocus: "accept",
+      accept: () => accept(product),
+      acceptLabel: "Eliminar",
+      reject,
+    });
+  };
+
+  //Desarrollo como renderizará cada producto en responsive mobile...........................
   return (
     <div
       key={product.id}
-      className="card p-4 flex flex-col gap-4 justify-between rounded-lg bg-[#1C1C1E]"
+      className="card p-4 flex flex-col gap-4 justify-between rounded-lg bg-[#1C1C1E] overflow-hidden"
     >
       <div className="flex flex-row justify-between items-center">
         <h3 className="text-md font-bold w-auto text-pretty">
@@ -24,7 +53,7 @@ const CartCard = ({
             rounded
             icon="pi pi-trash"
             className="bg-transparent text-red-600 border border-red-600 h-6 w-6"
-            onClick={() => deleteProduct(product)}
+            onClick={() => confirm1(product)}
           />
         </div>
       </div>
@@ -58,7 +87,7 @@ const CartCard = ({
           <Image
             src={product.image}
             alt={product.title}
-            className="h-24 w-24 object-cover overflow-hidden"
+            className="sm:h-24 sm:w-24 object-cover overflow-hidden h-16 w-16"
             preview
           />
         </div>

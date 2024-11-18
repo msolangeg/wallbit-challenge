@@ -6,16 +6,24 @@ export default {
   ],
   theme: {
     screens: {
-      'sm': '0px',
-      // => @media (min-width: 576px) { ... }
-
+      'xs': '0px',
+      'sm': '390px',
       'md': '768px',
-      // => @media (min-width: 960px) { ... }
-
-      'lg': '1440px',
-      // => @media (min-width: 1440px) { ... }
+      'lg': '1440px', 
     },
     extend: {
+      animation: {
+          'wiggle': 'wiggle 1s ease-in-out 6',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
       colors: {
         brandblue: {
           50: "#e7f5ff",

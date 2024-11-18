@@ -2,10 +2,10 @@ import React from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { ConfirmDialog, confirmDialog } from "primereact/confirmdialog";
-import QuantityButtons from "./QuantityButtons";
 import { Button } from "primereact/button";
 import { Image } from "primereact/image";
 import { formatCurrency } from "../../utils/helpers";
+import QuantityButtons from "./QuantityButtons";
 
 const CartTable = ({
   products,
@@ -16,19 +16,24 @@ const CartTable = ({
   toast,
   cleanCart,
 }) => {
-
-
+  //Template image de primereact...............................................................
   const imageBodyTemplate = (product) => {
     return (
-      <Image src={product.image} alt={product.title} className="w-2rem h-2rem" preview/>
+      <Image
+        src={product.image}
+        alt={product.title}
+        className="w-2rem h-2rem"
+        preview
+      />
     );
   };
-
+  //Calculo el total price de los productos......................................................
   const totalPrices = products.reduce(
     (total, product) => total + product.totalPrice,
     0
   );
 
+  //Limpia el carrito de TODOS los productos y muestra el toast.................................................
   const accept2 = () => {
     cleanCart();
     toast.current.show({
@@ -39,6 +44,7 @@ const CartTable = ({
     });
   };
 
+  //Elimna el producto y muestra el toast.......................................................................
   const accept = (product) => {
     deleteProduct(product);
     toast.current.show({
@@ -49,8 +55,10 @@ const CartTable = ({
     });
   };
 
+  //Cierra el toast al presionar No...........................................................
   const reject = () => {};
 
+  //Toast para confirmar si deseo eliminar UN solo producto del carrito.......................
   const confirm1 = (product) => {
     confirmDialog({
       message: "¿Estas seguro de eliminar el producto?",
@@ -63,6 +71,7 @@ const CartTable = ({
     });
   };
 
+  //Toast para confirmar si deseo eliminar TODOS los productos del carrito...................
   const confirm2 = () => {
     confirmDialog({
       message: "¿Estas seguro de eliminar todos los productos?",
@@ -75,26 +84,29 @@ const CartTable = ({
     });
   };
 
+  //Muestra el mensaje de carrito vacio en el lugar donde renderizara el carrito...........................................................
   const emptyMessage = () => {
     if (loading) {
       return (
         <div className="flex flex-col justify-center items-center p-2 text-center gap-6 w-full bg-red-500">
-          <i className="pi pi-spin pi-spinner text-6xl text-brandblue-500 w-full"/>
+          <i className="pi pi-spin pi-spinner text-6xl text-brandblue-500 w-full" />
         </div>
-      )
+      );
     }
     return (
+      //Renderizo el mensaje de carrito vacio..............................................................................................
       <div className="flex flex-col justify-center items-center p-2 text-center gap-6">
         <p className="text-xl px-40">
-          Aún no has agregado productos al carrito.<br/> ¡Añade algunos para
-          comenzar, utilizando el ID del producto  y tus conexiones astrales para
-          averiguarlos!
+          Aún no has agregado productos al carrito.
+          <br /> ¡Añade algunos para comenzar, utilizando el ID del producto y
+          tus conexiones astrales para averiguarlos!
         </p>
-        <i className="pi pi-cart-arrow-down text-6xl text-brandblue-500"/>
+        <i className="pi pi-cart-arrow-down text-6xl text-brandblue-500" />
       </div>
     );
   };
 
+  //Chequeo si hay productos en el carrito y muestro el precio total....................................................................
   const totalPriceRender = () => {
     if (products.length === 0) {
       return null;
@@ -107,6 +119,7 @@ const CartTable = ({
     );
   };
 
+  //Calcula y renderiza la cantidad de productos en el carrito...........................................................................
   const quantityRender = (product) => {
     return (
       <div className="flex flex-row justify-center items-center w-20 p-2 text-center gap-4">
@@ -121,6 +134,7 @@ const CartTable = ({
     );
   };
 
+  //Renderiza el boton para eliminar un producto del carrito............................................................................
   const renderDeleteButton = (product) => {
     return (
       <div className="flex flex-row justify-center items-center w-20 p-2 text-center gap-4">
@@ -132,11 +146,11 @@ const CartTable = ({
     );
   };
 
+  //Chequeo si hay productos en el carrito y muestro el boton para eliminar todos los productos............................................
   const deleteAllRender = () => {
     if (products.length === 0) {
       return null;
     }
-
     return (
       <div className="flex flex-row justify-center items-center p-2 text-center gap-4 w-fit">
         <Button
@@ -148,7 +162,7 @@ const CartTable = ({
     );
   };
 
-
+  //Renderiza la tabla de productos en el carrito...................................................................................
   return (
     <div className="card w-full">
       <ConfirmDialog

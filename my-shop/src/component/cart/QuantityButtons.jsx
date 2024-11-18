@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//Calcula la cantidad de productos en el carrito...........................................................................
 const QuantityButtons = ({
   product,
   incrementQuantity,
