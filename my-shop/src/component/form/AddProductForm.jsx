@@ -27,10 +27,10 @@ const AddProductForm = ({ onAddProduct, setLoading, loading }) => {
         <h1 className="text-brandblue-500 text-sm md:text-lg">
           Agrega los productos al carro de compra:
         </h1>
-        <div className="flex flex-col gap-20 w-full md:flex-row sm:gap-6">
+        <div className="flex flex-col w-full gap-6  md:gap-20  md:flex-row sm:gap-6">
           <FloatLabel>
             <InputText
-              className="px-4 py-2 sm:w-full"
+              className="px-4 py-2 sm:w-full w-full"
               id="cantidad"
               value={cantidad}
               onChange={(e) => setCantidad(e.target.value)}
@@ -39,7 +39,7 @@ const AddProductForm = ({ onAddProduct, setLoading, loading }) => {
           </FloatLabel>
           <FloatLabel>
             <InputText
-              className="px-4 py-2 sm:w-full"
+              className="px-4 py-2 sm:w-full  w-full"
               id="idProduct"
               value={idProduct}
               onChange={(e) => setIdProduct(e.target.value)}
