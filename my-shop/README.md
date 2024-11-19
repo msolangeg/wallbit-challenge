@@ -49,18 +49,16 @@ https://wallbit-challenge-iota.vercel.app/
 **Desktop**
 
 ![App Screenshot](https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731965739/Challenge/screen1destock_onnl6g.png)
-
+<br/>
 ![App Screenshot](https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731965740/Challenge/screen2destock_gncnjr.png)
 
 **Mobile**
 <div align="center">
 <img height="600" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_3_rxpivk.jpg"  />
 <img height="600" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969186/Challenge/MOBILE_4_uq9zr9.jpg"  />
-</div>
-<div align="center">
 <img height="600" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_2_u9pegk.jpg"  />
-<img height="600" src="https://res.cloudinary.com/dv7kzlqy6/image/upload/v1731969187/Challenge/MOBILE_1_hohojl.jpg"  />
 </div>
+
 
 ## API 📖
 
